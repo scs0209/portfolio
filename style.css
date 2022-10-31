@@ -106,6 +106,8 @@ p{
   /* transparent = navbar가 하얀색으로 변함 */
   background-color: transparent;
   transition: all var(--animation-duration) ease-in-out;
+  /* 네비바가 제일 위에 있게 만들어줌 */
+  z-index: 1;
 }
 
 #navbar.navbar--dark{
