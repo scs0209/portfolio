@@ -129,6 +129,15 @@ p{
   transition: ease-in-out 300ms;
 }
 
+.navbar__toggle-btn{
+  position: absolute;
+  top: 20px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
+
 /* Home */
 #home {
   background: url("images/background.png") center/cover no-repeat;
@@ -340,11 +349,12 @@ p{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 240px;
   height: 250px;
   margin: 2px;
   background-color: var(--color-light-white);
 }
+
 
 .project__img{
   max-width: 100%;
@@ -458,4 +468,47 @@ p{
 .contact__links i:hover{
   transform: scale(1.1);
   color: var(--color-blue)
+}
+
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  /* 미디어 쿼리 안에 들어가 있는 것들은 최소한으로 해야된다.
+  그래서 768보다 작아지면 토글버튼이 나오지만 위에서 토글 버튼을 꾸며준다. */
+  .navbar__toggle-btn{
+    display: block;
+  }
+
+  #navbar{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu{
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .about__majors{
+    flex-direction: column;
+  }
+
+  .major{
+    margin-bottom: 38px;
+  }
+
+  .skillset{
+    flex-direction: column;
+  }
+
+  .project{
+    flex-grow: 1;
+  }
+
+  .testimonial__avatar{
+    width: 80px;
+    height: 80px;
+  }
 }
