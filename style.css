@@ -354,6 +354,17 @@ p{
   /* 아이템이 꽉차면 자동으로 줄 바꿈을 해줌 */
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project {

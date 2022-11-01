@@ -21,13 +21,13 @@ navbarMenu.addEventListener('click', (event) => {
     return;
   }
   scrollIntoView(link);
-})
+});
 
 // Handle click on "contact me" button on home
 const contactBtn = document.querySelector('.home__contact');
 contactBtn.addEventListener('click', (event) => {
   scrollIntoView('#contact');
-})
+});
 
 // Make home slowly fade to transparent as the window scrolls down
 const home = document.querySelector('.home__container');
@@ -35,7 +35,7 @@ const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
   console.log(1 - window.scrollY / homeHeight);
   home.style.opacity = 1 - window.scrollY / homeHeight;
-})
+});
 
 // Show "arrow up" button when scrolling down
 const arrowUp = document.querySelector('.arrow-up')
@@ -45,15 +45,45 @@ document.addEventListener('scroll', () => {
   } else {
     arrowUp.classList.remove('visible');
   }
-})
+});
 
 // Handle click on the "arrow up" button
 arrowUp.addEventListener('click', () => {
   scrollIntoView('#home');
-})
+});
 
 
+// Projects
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if(filter == null) {
+    return;
+  }
+  projectContainer.classList.add('anim-out');
+  setTimeout(() => {
+    projects.forEach((project) => {
+      console.log(project.dataset.type);
+      if(filter === '*' || filter === project.dataset.type){
+          project.classList.remove('invisible');
+        } else {
+          project.classList.add('invisible');
+        }
+    });
+    projectContainer.classList.remove('anim-out');
+    }, 300);
 
+  // for (let i =0;i < projects.length;i++) {
+  //   project = projects[i];
+  // }
+  
+  // for(let project of projects) {
+
+  // }
+  //위의 식들은 projects.forEach와 똑같은 의미이다.
+});
 
 
 
