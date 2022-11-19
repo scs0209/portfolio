@@ -452,20 +452,20 @@ p{
 }
 
 .testimonial__avatar:nth-child(even) {
-  margin-right: 40px;
+  margin-left: 40px;
 }
 
-.testimonal__speechBubble{
+.testimonial__speechBubble{
   padding: 18px;
   background-color: var(--color-white);
   border-radius: var(--size-border-radius);
 }
 
-.testimonal__speechBubble p{
+.testimonial__speechBubble p{
   color: var(--color-light-grey);
 }
 
-.testimonal__speechBubble a{
+.testimonial__speechBubble a{
   color: var(--color-blue);
 }
 
@@ -618,7 +618,7 @@ p{
   }
 
   /* speechBubble이 항상 avartar보다 뒤에 나오게 해줌 */
-  .testimonal__speechBubble {
+  .testimonial__speechBubble {
     order: 1;
   }
 }

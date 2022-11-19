@@ -23,7 +23,6 @@ navbarMenu.addEventListener('click', (event) => {
   }
   navbarMenu.classList.remove('open');
   scrollIntoView(link);
-  selectNavItem(target);
 });
 
 //Navbar toggle button for small screen
@@ -105,12 +104,6 @@ workBtnContainer.addEventListener('click', (e) => {
 
 
 
-function scrollIntoView(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({behavior: "smooth"});
-}
-
-
 // 1. 모든 섹션 요소들과 메뉴 아이템들을 가지고 온다
 // 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다.
 // 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다.
@@ -130,10 +123,17 @@ function selectNavItem(selected) {
   selectedNavItem.classList.add('active');
 }
 
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({behavior: "smooth"});
+  selectNavItem(navItems[sectionIds.indexOf(selector)]);
+}
+
 const observerOptions = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.3,
+  root: null, //viewport (브라우저 창)
+  rootMargin: '0px', //0보다 크면 브라우저 창에 보이기도 전에 callback함수가 이미 시행된다.
+  threshold: 0.3, 
+  //threshold = 얼마 만큼 보여져야 callback함수가 호출 될지 정함 0 ~ 1 (100%), 반대로 나갈때는 반대로 시행
 }
 
 const observerCallback = (entries, observer) => {
@@ -150,9 +150,11 @@ const observerCallback = (entries, observer) => {
   });
 };
 
+// IntersectionObserver = 우리가 원하는 요소가 특정한 영역에 들어왔을 때 알려주는, 우리의 콜백 함수를 호출해주는 관찰자 역할을 해주는 webAPI.
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 sections.forEach(section => observer.observe(section));
 
+//scroll이 될 때마다 해당 하는 아이템을 활성화 시킴
 window.addEventListener('wheel', () => {
   if(window.scrollY === 0) {
     selectedNavIndex = 0;
