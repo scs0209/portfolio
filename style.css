@@ -1,37 +1,37 @@
 /* Global */
 :root {
   /* Color */
-    --color-white: #ffffff;
-    --color-light-white: #eeeeee;
-    --color-dark-white: #bdbdbd;
-    --color-pink: #fe918d;
-    --color-dark-pink: #ff6863;
-    --color-dark-grey: #4d4d4d;
-    --color-grey: #616161;
-    --color-light-grey: #7c7979;
-    --color-blue: #73aace;
-    --color-yellow: #fff7d1;
-    --color-orange: #feb546;
-    --color-black: #000000;
-    --background-color: #2e424b;
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+  --background-color: #2e424b;
 
   /* Font size */
-    --font-large: 48px;
-    --font-medium: 28px;
-    --font-regular: 18px;
-    --font-small: 16px;
-    --font-micro: 14px;
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
 
   /* Font weight */
-    --weight-bold: 700;
-    --weight-semi-bold: 600;
-    --weight-regular: 400;
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
 
-    /* Size */
-    --size-border-radius: 4px;
+  /* Size */
+  --size-border-radius: 4px;
 
-    /* Animation */
-    --animation-duration: 300ms;
+  /* Animation */
+  --animation-duration: 300ms;
 }
 
 /* Universal tags */
@@ -40,7 +40,7 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   cursor: default;
 }
@@ -50,11 +50,11 @@ a {
   color: var(--color-white);
 }
 
-ul{
+ul {
   padding-left: 0;
 }
 
-li{
+li {
   list-style: none;
 }
 
@@ -73,21 +73,21 @@ h1 {
   margin: 16px 0;
 }
 
-h2{
+h2 {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0;
 }
 
-h3{
+h3 {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 8px 0;
 }
 
-p{
+p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-black);
@@ -95,7 +95,7 @@ p{
 }
 
 /* Navbar */
-#navbar{
+#navbar {
   position: fixed;
   width: 100%;
   display: flex;
@@ -110,7 +110,7 @@ p{
   z-index: 1;
 }
 
-#navbar.navbar--dark{
+#navbar.navbar--dark {
   background-color: var(--background-color);
   padding: 8px;
 }
@@ -119,12 +119,12 @@ p{
   display: flex;
 }
 
-.navbar__logo{
+.navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
 }
 
-.navbar__menu__item{
+.navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
   color: var(--color-white);
@@ -136,13 +136,12 @@ p{
   border: 1px solid var(--color-white);
 }
 
-
-.navbar__menu__item:hover{
+.navbar__menu__item:hover {
   border-color: white;
   background-color: var(--color-blue);
 }
 
-.navbar__toggle-btn{
+.navbar__toggle-btn {
   position: absolute;
   top: 15px;
   right: 32px;
@@ -159,7 +158,7 @@ p{
   text-align: center;
 }
 
-.avartar{
+.avartar {
   width: 400px;
   height: 400px;
   border-radius: 50%;
@@ -171,7 +170,7 @@ p{
   color: var(--color-white);
 }
 
-.home__contact{
+.home__contact {
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
   color: var(--color-white);
@@ -181,7 +180,7 @@ p{
   border-radius: var(--size-border-radius);
 }
 
-.home__contact:hover{
+.home__contact:hover {
   background-color: var(--color-blue);
 }
 /* Section common */
@@ -191,19 +190,19 @@ p{
   margin: auto;
 }
 
-.section__container{
+.section__container {
   max-width: 1200px;
   margin: auto;
 }
 
 /* About */
-.about__majors{
+.about__majors {
   display: flex;
   justify-content: space-between;
   margin: 80px 0;
 }
 
-.major__icon{
+.major__icon {
   width: 170px;
   height: 170px;
   line-height: 170px;
@@ -215,110 +214,129 @@ p{
   margin-bottom: 16px;
 }
 
-.major__icon i{
+.major__icon i {
   transition: all var(--animation-duration) ease;
 }
 
-.major__icon:hover i{
+.major__icon:hover i {
   color: var(--color-black);
   transform: rotate(-30deg) scale(1.1);
 }
 
 .major__title,
-.major__description{
+.major__description {
   color: var(--color-grey);
 }
 
-.major__description{
+.major__description {
   font-size: var(--font-small);
 }
 
-.job{
+.job {
   display: flex;
   align-items: center;
 }
 
-.job__description{
+.job__description {
   margin: 0 16px;
   text-align: left;
 }
 
-.job__name, .job__period{
+.job__name,
+.job__period {
   color: var(--color-light-grey);
 }
 
-.job__name{
+.job__name {
   font-size: var(--font-small);
 }
 
-.job__period{
+.job__period {
   font-size: var(--font-micro);
 }
 
 /* Skill */
-#skills{
+#skills {
   background-color: var(--color-dark-white);
 }
 
-.skillset{
+#skills input {
+  background-color: transparent;
+  color: white;
+  border: none;
+  text-align: right;
+  font-size: 1rem;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+#skills input::-webkit-outer-spin-button,
+#skills input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.skillset {
   display: flex;
   background-color: var(--color-black);
   color: var(--color-white);
   margin: 20px 0;
 }
 
-.skillset__title{
+.skillset__title {
   font-size: var(--font-medium);
   font-weight: var(--weight-bold);
   color: var(--color-white);
   padding: 20px;
 }
 
-.skillset__left{
+.skillset__left {
   flex-basis: 60%;
   background-color: var(--color-dark-grey);
   padding: 20px 40px;
 }
 
-.skillset__right{
+.skillset__right {
   flex-basis: 40%;
 }
 
-.skill{
+.skill {
   margin-bottom: 32px;
 }
 
-.skill__description{
+.skill__description {
   display: flex;
   justify-content: space-between;
 }
 
-.skill__bar{
+.skill__bar {
   height: 3px;
   background-color: var(--color-black);
 }
 
-.skill__value{
+.skill__value {
   width: 100%;
   height: 3px;
   background-color: var(--color-blue);
 }
 
-.tools{
+.tools {
   background-color: var(--color-light-grey);
 }
 
-.tools, .etc{
+.tools,
+.etc {
   padding: 20px;
   height: 50%;
 }
 
 /* Work */
-.work__categories{
+.work__categories {
   margin: 40px;
 }
 
-.category__btn{
+.category__btn {
   border: 1px solid var(--color-dark-white);
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
@@ -339,7 +357,7 @@ p{
   top: 0;
 }
 
-.caetgory__count{
+.caetgory__count {
   background-color: var(--color-blue);
   border-radius: 50%;
   color: var(--color-white);
@@ -355,7 +373,7 @@ p{
   transition: all var(--animation-duration);
 }
 
-.work__projects{
+.work__projects {
   display: flex;
   /* 아이템이 꽉차면 자동으로 줄 바꿈을 해줌 */
   flex-wrap: wrap;
@@ -384,14 +402,13 @@ p{
   background-color: var(--color-light-white);
 }
 
-
-.project__img{
+.project__img {
   max-width: 100%;
   max-height: 100%;
   align-self: center;
 }
 
-.project__description{
+.project__description {
   position: absolute;
   background-color: #000000;
   display: flex;
@@ -406,7 +423,7 @@ p{
   transition: all var(--animation-duration) ease-in-out;
 }
 
-.project:hover .project__description{
+.project:hover .project__description {
   opacity: 0.8;
   transform: translateY(0px);
 }
@@ -416,7 +433,7 @@ p{
 }
 
 .project__description h3:after {
-  content: '';
+  content: "";
   display: block;
   position: relative;
   left: 50%;
@@ -428,7 +445,7 @@ p{
 }
 
 /* Testimonials */
-#testimonials{
+#testimonials {
   background-color: var(--color-light-white);
 }
 
@@ -441,13 +458,13 @@ p{
   margin: 32px 0;
 }
 
-.testimonial__avatar{
+.testimonial__avatar {
   width: 150px;
   height: 150px;
   border-radius: 50%;
 }
 
-.testimonial__avatar:nth-child(odd){
+.testimonial__avatar:nth-child(odd) {
   margin-right: 40px;
 }
 
@@ -455,28 +472,27 @@ p{
   margin-left: 40px;
 }
 
-.testimonial__speechBubble{
+.testimonial__speechBubble {
   padding: 18px;
   background-color: var(--color-white);
   border-radius: var(--size-border-radius);
 }
 
-.testimonial__speechBubble p{
+.testimonial__speechBubble p {
   color: var(--color-light-grey);
 }
 
-.testimonial__speechBubble a{
+.testimonial__speechBubble a {
   color: var(--color-blue);
 }
 
-
 /* Contact */
-#contact{
+#contact {
   background-color: var(--background-color);
 }
 
-.contact__title, 
-.contact__email, 
+.contact__title,
+.contact__email,
 .contact__rights {
   color: var(--color-white);
 }
@@ -485,22 +501,22 @@ p{
   margin: 32px 0;
 }
 
-.contact__links{
+.contact__links {
   font-size: var(--font-large);
   margin: 24px 0;
 }
 
-.contact__links i{
+.contact__links i {
   transition: all var(--animation-duration) ease-in;
 }
 
-.contact__links i:hover{
+.contact__links i:hover {
   transform: scale(1.1);
-  color: var(--color-blue)
+  color: var(--color-blue);
 }
 
 /* Scroll */
-.arrow-up{
+.arrow-up {
   position: fixed;
   bottom: 50px;
   right: 50px;
@@ -524,23 +540,23 @@ p{
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   :root {
-      /* Font size */
-        --font-large: 30px;
-        --font-medium: 18px;
-        --font-regular: 16px;
-        --font-small: 14px;
-        --font-micro: 12px;
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
   }
   /* 미디어 쿼리 안에 들어가 있는 것들은 최소한으로 해야된다.
   그래서 768보다 작아지면 토글버튼이 나오지만 위에서 토글 버튼을 꾸며준다. */
-  .navbar__toggle-btn{
+  .navbar__toggle-btn {
     display: block;
     top: 16px;
     right: 16px;
     font-size: var(--font-medium);
   }
 
-  #navbar{
+  #navbar {
     flex-direction: column;
     align-items: flex-start;
     background-color: var(--background-color);
@@ -548,7 +564,7 @@ p{
   #navbar.navbar--dark {
     padding: 16px;
   }
-  .navbar__menu{
+  .navbar__menu {
     flex-direction: column;
     text-align: center;
     width: 100%;
@@ -569,13 +585,13 @@ p{
     padding-top: 40px;
   }
 
-  .about__majors{
+  .about__majors {
     flex-direction: column;
     margin-top: 30px;
     margin-bottom: 0px;
   }
 
-  .major{
+  .major {
     margin-bottom: 30px;
   }
 
@@ -584,11 +600,11 @@ p{
     width: 100%;
   }
 
-  .skillset{
+  .skillset {
     flex-direction: column;
   }
 
-  .project{
+  .project {
     flex-grow: 1;
   }
 
@@ -603,7 +619,7 @@ p{
     margin-bottom: 8px;
   }
 
-  .testimonial__avatar{
+  .testimonial__avatar {
     width: 120px;
     height: 120px;
   }
