@@ -10,6 +10,9 @@
 
 ## 화면구성
 
+<img width= "400" src="https://user-images.githubusercontent.com/110822847/230571616-daeea2b8-ae3a-4857-ac19-da05de53d864.PNG" />
+
+
 ## 사용법
 
 1. 'index.html' 파일을 엽니다.
