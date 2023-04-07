@@ -10,7 +10,7 @@
 
 ## 화면구성
 
-<img width= "400" src=""![포트폴리오](https://user-images.githubusercontent.com/110822847/230571616-daeea2b8-ae3a-4857-ac19-da05de53d864.PNG) />
+<img width= "400" src="https://user-images.githubusercontent.com/110822847/230571616-daeea2b8-ae3a-4857-ac19-da05de53d864.PNG" />
 
 
 ## 사용법
