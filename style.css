@@ -289,12 +289,45 @@ p {
   font-weight: var(--weight-bold);
   color: var(--color-white);
   padding: 20px;
+  margin-bottom: 0;
+}
+
+.skillset__title.border {
+  border-bottom: 1px solid black;
 }
 
 .skillset__left {
+  position: relative;
   flex-basis: 60%;
   background-color: var(--color-dark-grey);
-  padding: 20px 40px;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.skillset__left__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.skillset__left-part {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.skillset__right-part {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  justify-content: flex-start;
+  text-align: center;
+  padding-left: 10px;
+  border-left: 1px solid black;
+  height: 100%;
 }
 
 .skillset__right {
@@ -312,11 +345,11 @@ p {
 
 .skill__bar {
   height: 3px;
+  width: 100%;
   background-color: var(--color-black);
 }
 
 .skill__value {
-  width: 100%;
   height: 3px;
   background-color: var(--color-blue);
 }
@@ -354,7 +387,7 @@ p {
 .category__btn:hover .caetgory__count {
   /* 커서가 올라가면 카운트가 보이게 해줌 */
   opacity: 1;
-  top: 0;
+  top: 5px;
 }
 
 .caetgory__count {
@@ -444,7 +477,7 @@ p {
   background-color: var(--color-white);
 }
 
-/* Testimonials */
+/* Qualifications */
 #qualifications {
   background-color: var(--color-light-white);
 }

@@ -182,11 +182,13 @@ sections.forEach((section) => observer.observe(section));
 //scroll이 될 때마다 해당 하는 아이템을 활성화 시킴
 window.addEventListener("wheel", () => {
   if (window.scrollY === 0) {
+    //스크롤이 젤 위에 있다면
     selectedNavIndex = 0;
   } else if (
     window.scrollY + window.innerHeight ===
     document.body.scrollHeight
   ) {
+    //스크롤이 젤 밑에 있다면
     selectedNavIndex = navItems.length - 1;
   }
   selectNavItem(navItems[selectedNavIndex]);
