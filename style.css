@@ -535,11 +535,24 @@ tbody tr:nth-child(even) {
   margin: 24px 0;
 }
 
+.contact__links img {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+  margin-bottom: 0.2em;
+  vertical-align: middle;
+}
+
 .contact__links i {
   transition: all var(--animation-duration) ease-in;
 }
 
 .contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-blue);
+}
+
+.contact__links img:hover {
   transform: scale(1.1);
   color: var(--color-blue);
 }
